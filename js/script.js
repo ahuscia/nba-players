@@ -5,7 +5,7 @@ console.log(headers);
 // przyklad na wyciagniecie imion graczy
 
 function getPlayerName(player) {
-    return player.PLAYER;
+  return player.PLAYER;
 }
 
 console.log(data.map(getPlayerName));
@@ -17,14 +17,12 @@ console.log(data.map(getPlayerName));
 // posortuj zawodnikow wg ilosci zbiorek ("REB"). Marcin Gortat powinien byc na 12 miejscu (index 11)!
 
 
-
-
 // zadanie 2
 // pokaz tylko tych graczy ktorzy rozegrali wszystkie mecze w sezonie ("GP"). Wszystkich meczy bylo 82.
 
-
-
-
+data.filter(function(user) {
+  return user.GP >= 82
+});
 
 // zadanie 3
 // wyciagnij tylko najwazniejsze dane o kazdym koszykarzu. Wyjsciowa tablica powinna zwierac obiekty z imieniem i nazwiskiem gracza (jako "name") i jego druzyne (jako "team):
@@ -41,7 +39,11 @@ console.log(data.map(getPlayerName));
 ]
 */
 
+function getImportant(player) {
+  return [player.PLAYER, player.TEAM];
+}
 
+console.log(data.map(getImportant));
 
 // zadanie 4
 // Posortuj graczy wg sumarycznej liczby minut ktore grali w calym sezonie. 
@@ -56,7 +58,16 @@ console.log(data.map(getPlayerName));
 // Pokaz imiona i nazwiska wszystkich koszykarzy z druzyn ("TEAM") ktore zaczynaja sie na "C". 
 
 
+function onlyTeam(player){
+  return player.TEAM;
+} 
+console.log(data.map(onlyTeam));
 
+function startedFromC(name) {
+  return name == "c";
+}
+console.log(data.map(startedFromC));
 
 // zadanie 6
 // pokaz graczy wszystkich graczy z druzyny ("TEAM") Chicago BUlls (skrot "CHI"). Posortuj ich po ilosci asyst ("AST") ktore zdobyli.
+

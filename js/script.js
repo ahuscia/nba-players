@@ -58,15 +58,6 @@ console.log(data.map(getImportant));
 // Pokaz imiona i nazwiska wszystkich koszykarzy z druzyn ("TEAM") ktore zaczynaja sie na "C". 
 
 
-function onlyTeam(player){
-  return player.TEAM;
-} 
-console.log(data.map(onlyTeam));
-
-function startedFromC(name) {
-  return name == "c";
-}
-console.log(data.map(startedFromC));
 
 // zadanie 6
 // pokaz graczy wszystkich graczy z druzyny ("TEAM") Chicago BUlls (skrot "CHI"). Posortuj ich po ilosci asyst ("AST") ktore zdobyli.
